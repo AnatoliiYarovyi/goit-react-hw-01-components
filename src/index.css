@@ -1,0 +1,12 @@
+body {
+  margin: 0 auto;
+  background-color: #fff;
+  color: #2a2a2a;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
