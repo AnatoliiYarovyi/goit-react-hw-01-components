@@ -8,7 +8,7 @@ const FriendItem = ({ isOnline, avatar = { defaultImage }, name }) => (
     <span
       className={style.status}
       style={{ backgroundColor: isOnline ? '#008000' : '#800000' }}
-    ></span>
+    />
     <img className={style.avatar} src={avatar} alt="avatar" width="48" />
     <p className={style.name}>{name}</p>
   </>
