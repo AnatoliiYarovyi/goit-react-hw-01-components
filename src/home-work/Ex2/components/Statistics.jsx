@@ -10,24 +10,26 @@ const randomColorRGB = () => {
   return `rgb(${r},${g},${b}, 85)`;
 };
 
-const Statistics = ({ title, stats }) => (
-  <section className={style.statistics}>
-    <h2 className={style.title}>{title}</h2>
-    <ul className={style.statList}>
-      {stats.map(({ id, label, percentage }) => (
-        <li
-          className={style.item}
-          key={id}
-          style={{
-            backgroundColor: randomColorRGB(),
-          }}
-        >
-          <StatisticsItem label={label} percentage={percentage} />
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+const Statistics = ({ title, stats }) => {
+  return (
+    <section className={style.statistics}>
+      {title && <h2 className={style.title}>{title}</h2>}
+      <ul className={style.statList}>
+        {stats.map(({ id, label, percentage }) => (
+          <li
+            className={style.item}
+            key={id}
+            style={{
+              backgroundColor: randomColorRGB(),
+            }}
+          >
+            <StatisticsItem label={label} percentage={percentage} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 Statistics.propTypes = {
   title: PropTypes.string,
